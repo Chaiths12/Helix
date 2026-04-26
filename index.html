@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@400;700&family=Kite+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@400;700&family=Kite+One&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -101,7 +101,9 @@
             right: 0;
             top: 0;
             bottom: 0;
-            z-index: 1;
+            z-index: 4;
+            mix-blend-mode: screen;
+            opacity: 0.4;
             -moz-animation: move-background 150s linear infinite;
             -ms-animation: move-background 150s linear infinite;
             -o-animation: move-background 150s linear infinite;
@@ -113,7 +115,7 @@
             height: 43vh;
             width: 43vh;
             position: absolute;
-            z-index: 1;
+            z-index: 3;
             right: -10vh;
             top: -10vh;
             opacity: 0.9;
@@ -1397,7 +1399,7 @@
             margin: 0 auto;
         }
         
-        /* Extracurricular Cards - Original Style */
+        /* Extracurricular Cards */
         .extracurricular-card {
             background: rgba(255, 255, 255, 0.15);
             padding: 2rem;
@@ -1416,6 +1418,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         
         .extracurricular-card:nth-child(2) {
@@ -1570,6 +1573,40 @@
             color: rgba(255, 255, 255, 0.7);
             letter-spacing: 0.05em;
             pointer-events: none;
+        }
+        
+        /* A Note From Me Section */
+        .note-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .note-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 3rem;
+            color: white;
+            line-height: 1.9;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 0 30px rgba(255, 255, 255, 0.05);
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.1rem;
+            position: relative;
+        }
+        
+        .note-card p {
+            margin-bottom: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .note-signature {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: right;
+            opacity: 0.9;
         }
         
         /* Contact Section */
@@ -1841,10 +1878,10 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Chaithra Shree P</h1>
-            <p class="subtitle">Computer Science Engineering Student</p>
+            <p class="subtitle">AI Undergrad | 2022-2026</p>
             <p class="tagline">Passionate about creating innovative solutions through code and exploring the intersection of design and technology</p>
             <div class="cta-buttons">
-                <a href="Chai/Chaithra new resume.pdf" download class="btn primary"><i class="fas fa-download"></i> Download Resume</a>
+                <a href="public/Chaithra%20shree%20P%20Resume%20U.pdf" download="Chaithra_Shree_Resume.pdf" target="_blank" rel="noopener" class="btn primary" onclick="event.stopPropagation()"><i class="fas fa-download"></i> Download Resume</a>
             </div>
         </div>
     </section>
@@ -1872,9 +1909,8 @@
                 <p>With hands-on experience as an Intern at Nokia Solutions and Networks, I've also developed skills in full-stack development, database management, and data analytics by actively participating in technical communities and hackathons. I'm always eager to learn new technologies and take on challenging projects coming my way.</p>
                 
                 <div class="contact-info">
-                    <a href="mailto:chaithrashreep2003@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                     <a href="https://github.com/Chaiths12" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.credly.com/users/chaithra-shree-p.6c800082" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/chaithra-shree-293901287" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -2438,7 +2474,7 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <h3>Intern</h3>
+                    <h3>Internship</h3>
                     <h4>Nokia Solutions and Networks</h4>
                     <p class="duration">8th SEP 2025 to 24th JULY 2026</p>
                     <div class="experience-details">
@@ -2451,10 +2487,12 @@
                         </ul>
                         <h5>Technologies Used:</h5>
                         <div class="project-tech">
-                            <span class="tech-tag">Software Testing</span>
-                            <span class="tech-tag">M365</span>
+                            <span class="tech-tag">Testing</span>
                             <span class="tech-tag">Linux</span>
                             <span class="tech-tag">Windows Security</span>
+                            <span class="tech-tag">Active Directory</span>
+                            <span class="tech-tag">Power Automate</span>
+                            <span class="tech-tag">Power BI</span>
                         </div>
                     </div>
                 </div>
@@ -2490,18 +2528,18 @@
             </div>
             
             <div class="achievement-card-small">
-                <h3>Achievement 4</h3>
-                <p>Description for achievement 4</p>
+                <h3>Debate Competition Winner</h3>
+                <p>Received 2nd place in the interbranch debate competition</p>
             </div>
             
             <div class="achievement-card-small">
-                <h3>Achievement 5</h3>
-                <p>Description for achievement 5</p>
+                <h3>Mock Interview Competition</h3>
+                <p>Secured 1st place in the mock interview competition held at college level for all branches</p>
             </div>
             
             <div class="achievement-card-small">
-                <h3>Achievement 6</h3>
-                <p>Description for achievement 6</p>
+                <h3>Prototype Showcase Competition</h3>
+                <p>Participated in the intercollege prototype showcase competition for showcasing real time AI-ML projects</p>
             </div>
         </div>
     </section>
@@ -2509,6 +2547,35 @@
     <!-- Extracurricular Activities Section -->
     <section id="extracurricular" class="section">
         <h2 class="section-title">Extracurricular Activities</h2>
+        
+        <!-- SVG Filter for Electric Border Effect -->
+        <svg class="electric-svg" style="position:absolute;pointer-events:none;width:0;height:0;">
+            <defs>
+                <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+                    <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+                        <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+                    <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+                        <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise3" seed="2" />
+                    <feOffset in="noise3" dx="0" dy="0" result="offsetNoise3">
+                        <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise4" seed="2" />
+                    <feOffset in="noise4" dx="0" dy="0" result="offsetNoise4">
+                        <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+                    <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+                    <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+                    <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+                    <feDisplacementMap in="SourceGraphic" in2="combinedNoise" scale="30" xChannelSelector="R" yChannelSelector="B" />
+                </filter>
+            </defs>
+        </svg>
+        
         <div class="extracurricular-grid">
             <div class="extracurricular-card flip-card">
                 <div class="flip-card-inner">
@@ -2584,13 +2651,29 @@
         </div>
     </section>
 
+    <!-- A Note From Me Section -->
+    <section id="note" class="section">
+        <h2 class="section-title">A Note From Me</h2>
+        <div class="note-container">
+            <div class="note-card">
+                <p>Hey, enough of career stuff...</p>
+                <p>I wanted to pen this down for you to know what I am as a person, apart from my work.</p>
+                <p>I picture myself as an extroverted enthusiastic adult, who wants to stand out of her peer group by doing something uniquely unusual in the big 2026. Still figuring out how.</p>
+                <p>I am a woman who is passionately driven towards tech.</p>
+                <p>I love hustling on weekdays and giving time for my other interests on weekends. I dance my choreos, sing songs for my loved ones, sometimes I argue <span style="opacity:0.8;">[No doubt I win debates lol]</span>.</p>
+                <p>And finally, I am looking for a job that keeps me curious everyday, and a work environment that has enough space for me to grow. Contact me to know more.</p>
+                <div class="note-signature">— Chaithra <span style="opacity:0.7; font-size:0.9rem;">(infamously called Chai)</span></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
             <div class="contact-form">
                 <h3 style="color: white; margin-bottom: 1.2rem; font-size: 1.3rem;">Send me a message</h3>
-                <form>
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -2607,7 +2690,8 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="3" placeholder="Your message..." required></textarea>
                     </div>
-                    <button type="submit" class="btn primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <button type="submit" id="submit-btn" class="btn primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <p id="form-status" style="margin-top: 1rem; text-align: center; font-size: 0.95rem;"></p>
                 </form>
             </div>
             
@@ -2657,6 +2741,51 @@
     <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" />
 
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init('WbQxvgfbpPlWNwdal');
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = document.getElementById('submit-btn');
+            const status = document.getElementById('form-status');
+            
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            status.textContent = '';
+            
+            const params = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                title: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Send to you (Template 1)
+            emailjs.send('service_xgr0nga', 'template_lk6ylfg', params)
+                .then(() => {
+                    // Send auto-reply to user (Template 2)
+                    return emailjs.send('service_xgr0nga', 'template_igkm6fi', params);
+                })
+                .then(() => {
+                    status.style.color = '#4caf50';
+                    status.textContent = '✅ Message sent! I\'ll get back to you soon.';
+                    document.getElementById('contact-form').reset();
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                })
+                .catch((error) => {
+                    status.style.color = '#f44336';
+                    status.textContent = '❌ Something went wrong. Please try again.';
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    console.error('EmailJS error:', error);
+                });
+        });
+    </script>
+
     <script type="module">
         import { AnimationEngine } from './js/animationEngine.js';
         import { BackgroundAnimationSystem } from './js/backgroundAnimations.js';
@@ -2676,19 +2805,19 @@
                 const navLinks = document.querySelectorAll('.nav-links a, .cta-buttons a');
                 navLinks.forEach(link => {
                     link.addEventListener('click', (e) => {
-                        e.preventDefault();
+                        // Skip download links
+                        if (link.hasAttribute('download')) return;
+                        
                         const targetId = link.getAttribute('href');
-                        if (targetId.startsWith('#')) {
+                        if (targetId && targetId.startsWith('#')) {
+                            e.preventDefault();
                             const targetSection = document.querySelector(targetId);
                             if (targetSection) {
-                                // Calculate offset to center the section better
                                 const offsetTop = targetSection.offsetTop - 50;
                                 window.scrollTo({
                                     top: offsetTop,
                                     behavior: 'smooth'
                                 });
-                                
-                                // Update active navigation state
                                 updateActiveNavLink(targetId);
                             }
                         }
